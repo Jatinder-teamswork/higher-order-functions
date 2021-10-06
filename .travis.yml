@@ -1,0 +1,17 @@
+language: swift
+osx_image: xcode12.0.1
+xcode_workspace: higher_order_functions.xcodeproj # path to your xcodeproj folder
+xcode_scheme: higher_order_functions
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
+before_install:
+    - pod install
+after_success:
+    - gem install jazzy
+    - make documentation
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $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  # Set in the settings page of your repository, as a secure variable
+  local-dir: docs
+  on:
+    branch: master
