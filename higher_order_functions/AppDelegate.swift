@@ -7,6 +7,18 @@
 
 import UIKit
 
+/// The state of the possible background states.
+///
+/// The state can be updated by overriding the state with the next background state.
+/// ```
+/// backgroundState = backgroundState.nextBackgroundState()
+/// ```
+///
+/// - Note: This is an example of a note
+///
+/// - Warning: This is an example of a warning.
+///
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
